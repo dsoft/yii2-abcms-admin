@@ -1,0 +1,24 @@
+{
+    "name": "abcms/yii2-admin",
+    "type": "yii2-extension",
+    "description": "",
+    "keywords": [
+    ],
+    "authors": [
+    ],
+    "support": {
+    },
+    "require": {
+        "yiisoft/yii2": "*",
+        "abcms/yii2-library": "dev-master"
+    },
+    "suggest": {
+    },
+    "autoload": {
+        "psr-4": {"abcms\\admin\\": ""}
+    },
+    "bin": [
+    ],
+    "extra": {
+    }
+}
