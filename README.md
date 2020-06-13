@@ -43,6 +43,6 @@ Update `identityClass` and `loginUrl` from the user component in the web.php con
 'user' => [
     'identityClass' => 'abcms\admin\models\Admin',
     'enableAutoLogin' => true,
-    'loginUrl' => ['/admin-user/default/login'],
+    'loginUrl' => ['/admin-user/user/login'],
 ],
 ```

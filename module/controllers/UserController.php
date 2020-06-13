@@ -27,10 +27,9 @@ class UserController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['logout'],
+                'only' => ['logout', 'update'],
                 'rules' => [
                     [
-                        'actions' => ['logout'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -64,6 +63,28 @@ class UserController extends Controller
         $model->password = '';
         return $this->render('login', [
             'model' => $model,
+        ]);
+    }
+
+    /**
+     * Update profile action.
+     *
+     * @return Response|string
+     */
+    public function actionUpdate()
+    {
+        $model = Yii::$app->user->identity;
+        if ($model->load(Yii::$app->request->post()) && $model->validate()) {
+            if($model->password){
+                $model->setPassword($model->password);
+            }
+            if($model->save(false)){
+                Yii::$app->session->setFlash('success', 'Profile updated.');
+                return $this->refresh();
+            }
+        }
+        return $this->render('update', [
+                'model' => $model,
         ]);
     }
 
