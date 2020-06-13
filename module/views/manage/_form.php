@@ -13,11 +13,9 @@ use common\models\Competition;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?php if($model->scenario == "create"): ?>
     <?= $form->field($model, 'username')->textInput(['maxlength' => true]) ?>
     
     <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
-    <?php endif; ?>
     
     <?= $form->field($model, 'password')->passwordInput() ?>
     

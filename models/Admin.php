@@ -40,13 +40,13 @@ class Admin extends \abcms\library\base\BackendActiveRecord implements \yii\web\
     public function rules()
     {
         return [
-            [['username', 'email', 'password'], 'required', 'on' => 'create'],
+            [['password'], 'required', 'on' => 'create'],
             ['password', 'string', 'min' => 6],
             ['email', 'email'],
-            [['username', 'email'], 'string', 'max' => 255, 'on' => 'create'],
+            [['username', 'email'], 'string', 'max' => 255],
             [['active'], 'string', 'max' => 1],
-            [['username'], 'unique', 'on' => 'create'],
-            [['email'], 'unique', 'on' => 'create'],
+            [['username'], 'unique'],
+            [['email'], 'unique'],
         ];
     }
 
