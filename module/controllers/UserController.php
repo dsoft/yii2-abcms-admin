@@ -11,8 +11,14 @@ use abcms\admin\models\LoginForm;
 /**
  * Default controller for the `admin` module
  */
-class DefaultController extends Controller
+class UserController extends Controller
 {
+
+    /**
+     * {@inheritdoc}
+     */
+    public $defaultAction = 'login';
+    
     /**
      * {@inheritdoc}
      */
