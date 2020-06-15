@@ -1,8 +1,8 @@
 # Yii2 ABCMS admin library
 
 ## Features:
-* Admin CRUD
-* Admin pages: login, update profile, forgot password
+* Admin CRUD.
+* Admin pages: login, update profile.
 
 ## Install:
 ```bash
