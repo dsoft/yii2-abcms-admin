@@ -5,7 +5,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model backend\models\Admin */
 
-$this->title = 'Update Profile';
+$this->title = Yii::t('abcms.admin', 'Update Profile');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="admin-update">

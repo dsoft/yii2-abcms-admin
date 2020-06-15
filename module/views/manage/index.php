@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel backend\models\AdminSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Admins';
+$this->title = Yii::t('abcms.admin', 'Admins');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="admin-index">
@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Admin', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a(Yii::t('abcms.admin', 'Create Admin'), ['create'], ['class' => 'btn btn-success']) ?>
     </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -30,8 +30,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'createdTime',
             'updatedTime',
 
-                        ['class' => 'abcms\library\grid\ActivateColumn'],
-                        ['class' => 'yii\grid\ActionColumn'],
+            ['class' => 'abcms\library\grid\ActivateColumn'],
+            ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
 </div>

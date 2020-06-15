@@ -77,16 +77,16 @@ class Admin extends \abcms\library\base\BackendActiveRecord implements \yii\web\
     {
         return [
             'id' => 'ID',
-            'username' => 'Username',
-            'authKey' => 'Auth Key',
-            'accessToken' => 'Access Token',
-            'passwordHash' => 'Password Hash',
-            'passwordResetToken' => 'Password Reset Token',
-            'email' => 'Email',
-            'active' => 'Active',
-            'deleted' => 'Deleted',
-            'createdTime' => 'Created Time',
-            'updatedTime' => 'Updated Time',
+            'username' => Yii::t('abcms.admin', 'Username'),
+            'authKey' => Yii::t('abcms.admin', 'Auth Key'),
+            'accessToken' => Yii::t('abcms.admin', 'Access Token'),
+            'passwordHash' => Yii::t('abcms.admin', 'Password Hash'),
+            'passwordResetToken' => Yii::t('abcms.admin', 'Password Reset Token'),
+            'email' => Yii::t('abcms.admin', 'Email'),
+            'active' => Yii::t('abcms.admin', 'Active'),
+            'deleted' => Yii::t('abcms.admin', 'Deleted'),
+            'createdTime' => Yii::t('abcms.admin', 'Created Time'),
+            'updatedTime' => Yii::t('abcms.admin', 'Updated Time'),
         ];
     }
 
