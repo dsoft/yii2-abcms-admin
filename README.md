@@ -46,3 +46,6 @@ Update `identityClass` and `loginUrl` from the user component in the web.php con
     'loginUrl' => ['/admin-user/user/login'],
 ],
 ```
+
+## Login and change password
+User **admin / admin** to login and don't forget to change the default password and email.
